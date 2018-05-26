@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>로그인</title>
+	<style>
+		#loginBox{
+			width: 500px; height: 400px; border:2px solid grey;
+			position:absolute; left:50%; top:50%; margin-left:-250px; margin-top:-200px; background:white;
+			display: table;text-align:center;border-radius:15px;
+		}
+		#middle{
+			display: table-cell; vertical-align: middle; margin: 0 auto;
+
+			}
+		h1{ font-family:'굴림'; font-style:italic; text-align:center; color:dimgrey; font-size:50px;}
+		.sb {
+			background:aquamarine; width:120px; height:15;
+			}
+	</style>
+	<script>
+		function login(){
+			var id = document.getElementById('id');
+			var pw = document.getElementById('pw');
+			if(id.value==""){
+			  alert('아이디를 확인해주세요');
+				id.focus();
+				return;
+			}
+			if(pw.value==""){
+			  alert('비밀번호를 확인해주세요');
+				pw.focus();
+				return;
+			}
+		}
+		
+	</script>
+
+</head>
+<body>
+	<div id="loginBox">
+		<div id="middle">
+		<h1>Log in</h1>
+		<form action="intro.html" method="get">
+		아이디&nbsp&nbsp&nbsp&nbsp<input type="text" id = "id" placeholder="ID" ><br>
+		비밀번호&nbsp<input type="password" id="pw" placeholder="PASSWORD"><br><br>
+		<input type="button" onclick="login()" class="sb" value="로그인">&nbsp&nbsp<input type="submit" class="sb" value="회원가입">
+		</form>
+		</div>
+		
+	
+	</div>
+
+
+</body>
+</html>
